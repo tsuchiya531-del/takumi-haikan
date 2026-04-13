@@ -524,8 +524,8 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-14SKS27TPN');
-  /* Google広告 コンバージョンタグ ※ AW-XXXXXXXXXX を差し替えてください */
-  gtag('config', 'AW-XXXXXXXXXX');
+  /* Google広告 コンバージョンタグ */
+  gtag('config', 'AW-396980754');
 </script>
 
 </head>
@@ -1127,17 +1127,17 @@
 
       if (isTel) {
         gtag('event', 'phone_tap', { cta_location: ctaValue });
-        /* Google広告 電話タップCV ※ AW-XXXXXXXXXX/YYYYYY を差し替えてください */
+        /* Google広告 電話タップCV */
         gtag('event', 'conversion', {
-          send_to: 'AW-XXXXXXXXXX/YYYYYY',
+          send_to: 'AW-396980754/phone_tap',
           event_callback: function(){}
         });
       }
       if (isLine) {
         gtag('event', 'line_tap', { cta_location: ctaValue });
-        /* Google広告 LINEタップCV ※ AW-XXXXXXXXXX/ZZZZZZ を差し替えてください */
+        /* Google広告 LINEタップCV */
         gtag('event', 'conversion', {
-          send_to: 'AW-XXXXXXXXXX/ZZZZZZ',
+          send_to: 'AW-396980754/line_tap',
           event_callback: function(){}
         });
       }
