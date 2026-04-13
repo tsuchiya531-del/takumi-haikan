@@ -91,6 +91,13 @@
     background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));
     color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px;
   }
+  .header-nav{display:flex;gap:4px;align-items:center}
+  .header-nav a{
+    font-size:11px;font-weight:700;color:var(--c-text-sub);padding:6px 8px;
+    border-radius:6px;white-space:nowrap;transition:background .15s;
+  }
+  .header-nav a:hover{background:var(--c-bg);color:var(--c-primary-dark)}
+  @media (max-width:767px){.header-nav{display:none}}
   .header-cta{display:flex;gap:6px}
   .header-cta a{
     font-size:12px;font-weight:700;padding:8px 10px;border-radius:8px;
@@ -495,6 +502,12 @@
       <span class="logo-mark">匠</span>
       <span>配管洗浄・詰まり抜き専門店</span>
     </a>
+    <nav class="header-nav">
+      <a href="#reason">選ばれる理由</a>
+      <a href="#pricing">料金</a>
+      <a href="#flow">流れ</a>
+      <a href="#faq">FAQ</a>
+    </nav>
     <div class="header-cta">
       <!-- tel: IVRy 050-1725-6168 / 0120取得時はここを差し替え -->
       <a class="tel" href="tel:05017256168">📞 電話</a>
@@ -1017,7 +1030,7 @@
   <div class="container">
     <div class="shop">配管洗浄・詰まり抜き専門店 匠</div>
     <!-- 差し替え: 会社情報 -->
-    <p>対応エリア：〇〇県〇〇市・近隣エリア ／ 営業時間：8:00〜20:00 ／ 定休日：年中無休</p>
+    <p>対応エリア：愛知県全域・岐阜県 / 三重県の一部 ／ 営業時間：8:00〜20:00 ／ 定休日：年中無休</p>
     <p style="margin-top:6px">TEL：<a href="tel:05017256168">050-1725-6168</a></p>
     <p style="margin-top:14px;opacity:.7">© 配管洗浄・詰まり抜き専門店 匠</p>
   </div>
