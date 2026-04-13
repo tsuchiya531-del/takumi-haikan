@@ -470,6 +470,21 @@
     *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   }
 </style>
+
+<!-- =========================================================
+  GA4 グローバルサイトタグ (gtag.js)
+  ※ GA4測定IDを取得後に G-14SKS27TPN を差し替えてください
+========================================================= -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-14SKS27TPN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-14SKS27TPN');
+  /* Google広告 コンバージョンタグ ※ AW-XXXXXXXXXX を差し替えてください */
+  gtag('config', 'AW-XXXXXXXXXX');
+</script>
+
 </head>
 <body>
 
@@ -1031,12 +1046,57 @@
   };
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  /* CTA計測用フック(差し替え先でGA等に接続可) */
+  /* =======================================================
+     GA4 / Google広告 イベント計測
+     ======================================================= */
+
+  /* --- 電話タップ & LINEタップ --- */
   document.querySelectorAll('[data-cta]').forEach(el => {
     el.addEventListener('click', () => {
-      // 例: window.gtag && gtag('event','cta_click',{label: el.dataset.cta});
+      const ctaValue = el.dataset.cta;          // 例: "hero-tel", "mid1-line"
+      const isTel  = ctaValue.includes('tel');
+      const isLine = ctaValue.includes('line');
+
+      if (isTel) {
+        gtag('event', 'phone_tap', { cta_location: ctaValue });
+        /* Google広告 電話タップCV ※ AW-XXXXXXXXXX/YYYYYY を差し替えてください */
+        gtag('event', 'conversion', {
+          send_to: 'AW-XXXXXXXXXX/YYYYYY',
+          event_callback: function(){}
+        });
+      }
+      if (isLine) {
+        gtag('event', 'line_tap', { cta_location: ctaValue });
+        /* Google広告 LINEタップCV ※ AW-XXXXXXXXXX/ZZZZZZ を差し替えてください */
+        gtag('event', 'conversion', {
+          send_to: 'AW-XXXXXXXXXX/ZZZZZZ',
+          event_callback: function(){}
+        });
+      }
     });
   });
+
+  /* --- セクション到達計測 (IntersectionObserver / 各1回のみ) --- */
+  (function() {
+    var sectionIds = [
+      'worry','reason','service','symptom',
+      'pricing','flow','voice','faq','final-cta'
+    ];
+    var fired = {};
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting && !fired[entry.target.id]) {
+          fired[entry.target.id] = true;
+          gtag('event', 'section_view', { section_id: entry.target.id });
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sectionIds.forEach(function(id) {
+      var el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  })();
 </script>
 </body>
 </html>
