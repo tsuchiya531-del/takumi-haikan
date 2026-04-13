@@ -97,7 +97,43 @@
     border-radius:6px;white-space:nowrap;transition:background .15s;
   }
   .header-nav a:hover{background:var(--c-bg);color:var(--c-primary-dark)}
-  @media (max-width:767px){.header-nav{display:none}}
+  /* ハンバーガーメニュー */
+  .hamburger{
+    display:none;width:36px;height:36px;border:none;background:none;
+    cursor:pointer;flex-direction:column;justify-content:center;align-items:center;gap:5px;
+    padding:4px;
+  }
+  .hamburger span{
+    display:block;width:22px;height:2px;background:var(--c-primary-dark);
+    border-radius:2px;transition:transform .25s,opacity .25s;
+  }
+  .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .hamburger.open span:nth-child(2){opacity:0}
+  .hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .sp-menu{
+    display:none;position:absolute;top:100%;left:0;right:0;
+    background:#fff;border-top:1px solid var(--c-border);
+    box-shadow:0 8px 24px rgba(0,0,0,.1);padding:16px 20px;
+    flex-direction:column;gap:4px;z-index:49;
+  }
+  .sp-menu.open{display:flex}
+  .sp-menu a{
+    display:block;padding:12px 16px;font-size:15px;font-weight:700;
+    color:var(--c-text);border-radius:8px;transition:background .15s;
+  }
+  .sp-menu a:hover,.sp-menu a:active{background:var(--c-bg);color:var(--c-primary-dark)}
+  .sp-menu .sp-menu-cta{
+    display:flex;gap:8px;margin-top:8px;padding-top:12px;border-top:1px solid var(--c-border);
+  }
+  .sp-menu .sp-menu-cta a{
+    flex:1;text-align:center;padding:14px;border-radius:10px;color:#fff;font-size:14px;
+  }
+  .sp-menu .sp-menu-cta .tel{background:var(--c-accent)}
+  .sp-menu .sp-menu-cta .line{background:var(--c-line)}
+  @media (max-width:767px){
+    .header-nav{display:none}
+    .hamburger{display:flex}
+  }
   .header-cta{display:flex;gap:6px}
   .header-cta a{
     font-size:12px;font-weight:700;padding:8px 10px;border-radius:8px;
@@ -513,6 +549,19 @@
       <a class="tel" href="tel:05017256168">📞 電話</a>
       <!-- LINE: 公式アカウント開設後にURLを差し替え -->
       <a class="line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener">LINE</a>
+    </div>
+    <button class="hamburger" aria-label="メニュー" onclick="this.classList.toggle('open');document.querySelector('.sp-menu').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="sp-menu">
+    <a href="#reason" onclick="closeSPMenu()">選ばれる理由</a>
+    <a href="#pricing" onclick="closeSPMenu()">料金</a>
+    <a href="#flow" onclick="closeSPMenu()">流れ</a>
+    <a href="#faq" onclick="closeSPMenu()">FAQ</a>
+    <div class="sp-menu-cta">
+      <a class="tel" href="tel:05017256168">📞 電話する</a>
+      <a class="line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener">💬 LINE</a>
     </div>
   </div>
 </header>
@@ -1050,6 +1099,12 @@
       item.classList.toggle('open');
     });
   });
+
+  /* SPメニューを閉じる */
+  function closeSPMenu(){
+    document.querySelector('.hamburger').classList.remove('open');
+    document.querySelector('.sp-menu').classList.remove('open');
+  }
 
   /* スクロール時にヘッダー影 */
   const header = document.querySelector('.header');
