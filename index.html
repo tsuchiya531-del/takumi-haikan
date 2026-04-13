@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="配管洗浄・詰まり抜き専門店 匠｜キッチン・浴室・洗面・洗濯機・屋外排水管の詰まりや悪臭、ボコボコ音を解決。見積り後に作業、追加費用は事前説明の明朗会計で安心。戸建ての排水トラブルはお任せください。" />
+<meta name="keywords" content="配管洗浄,排水 詰まり,高圧洗浄,キッチン 詰まり,浴室 詰まり,屋外排水管,悪臭,ボコボコ音,戸建て" />
+<meta property="og:title" content="配管洗浄・詰まり抜き専門店 匠" />
+<meta property="og:description" content="戸建ての排水トラブルはお任せください。見積り後に作業、追加費用は事前説明。" />
+<meta property="og:type" content="website" />
+<title>配管洗浄・詰まり抜き専門店 匠｜戸建ての排水トラブル・詰まり・悪臭の専門解決</title>
+
+<!-- =========================================================
+  差し替え変数(CSS変数/HTML内コメントで管理)
+  - 電話番号: data-tel / tel:リンク
+  - LINEリンク: data-line / href
+  - 料金: #pricing セクション内のテキスト
+  - 口コミ: #voice セクション内のテキスト
+  - 会社情報: フッター
+========================================================= -->
+
+<style>
+  :root{
+    --c-primary:#0a6ed1;      /* メインブルー */
+    --c-primary-dark:#054d96;
+    --c-primary-light:#e7f2fb;
+    --c-accent:#ff7a00;       /* CTAオレンジ */
+    --c-accent-dark:#e96a00;
+    --c-line:#06c755;         /* LINEグリーン */
+    --c-line-dark:#05a647;
+    --c-text:#1b2a3a;
+    --c-text-sub:#5b6b7d;
+    --c-bg:#f6fbff;
+    --c-card:#ffffff;
+    --c-border:#dbe7f2;
+    --shadow-sm:0 2px 6px rgba(10,110,209,.08);
+    --shadow-md:0 8px 24px rgba(10,110,209,.12);
+    --radius:14px;
+    --max:1080px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP","Yu Gothic","Meiryo",sans-serif;
+    color:var(--c-text);
+    background:var(--c-bg);
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+    font-size:16px;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  ul{list-style:none}
+
+  /* ------------ 共通 ------------ */
+  .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+  .section{padding:64px 0}
+  .section-head{text-align:center;margin-bottom:36px}
+  .section-head .eyebrow{
+    display:inline-block;
+    color:var(--c-primary);
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.1em;
+    margin-bottom:8px;
+  }
+  .section-head h2{
+    font-size:26px;
+    line-height:1.4;
+    font-weight:900;
+    color:var(--c-text);
+  }
+  .section-head h2 span{color:var(--c-primary)}
+  .section-head p{color:var(--c-text-sub);margin-top:10px;font-size:15px}
+
+  /* ------------ ヘッダー ------------ */
+  .header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.95);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--c-border);
+  }
+  .header-inner{
+    max-width:var(--max);margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:10px 16px;gap:8px;
+  }
+  .logo{display:flex;align-items:center;gap:8px;font-weight:900;color:var(--c-primary-dark);font-size:15px}
+  .logo-mark{
+    width:34px;height:34px;border-radius:8px;
+    background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));
+    color:#fff;display:grid;place-items:center;font-weight:900;font-size:14px;
+  }
+  .header-cta{display:flex;gap:6px}
+  .header-cta a{
+    font-size:12px;font-weight:700;padding:8px 10px;border-radius:8px;
+    display:inline-flex;align-items:center;gap:4px;white-space:nowrap;
+  }
+  .header-cta .tel{background:var(--c-accent);color:#fff}
+  .header-cta .line{background:var(--c-line);color:#fff}
+
+  /* ------------ ファーストビュー ------------ */
+  .hero{
+    position:relative;
+    background:
+      radial-gradient(1200px 400px at 80% -50px,rgba(255,255,255,.8),transparent),
+      linear-gradient(160deg,#e7f2fb 0%,#cfe4f8 100%);
+    padding:40px 0 32px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:auto 0 0 0;height:40px;
+    background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60'><path fill='%23f6fbff' d='M0,32L80,37.3C160,43,320,53,480,48C640,43,800,21,960,16C1120,11,1280,21,1360,26.7L1440,32L1440,60L0,60Z'/></svg>") no-repeat center bottom / cover;
+  }
+  .hero-inner{max-width:var(--max);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .hero-badge{
+    display:inline-flex;align-items:center;gap:6px;
+    background:#fff;color:var(--c-primary-dark);
+    padding:6px 12px;border-radius:999px;font-size:12px;font-weight:700;
+    box-shadow:var(--shadow-sm);
+  }
+  .hero-badge .dot{width:8px;height:8px;background:#06c755;border-radius:50%;display:inline-block}
+  .hero-badge.exp{
+    background:linear-gradient(135deg,#0a4c8c,#1a73c7);color:#fff;
+  }
+  .hero-badge.exp .num{font-size:14px;font-weight:900;letter-spacing:.02em}
+  .hero h1{
+    font-size:28px;line-height:1.35;font-weight:900;color:var(--c-text);
+    letter-spacing:.01em;
+  }
+  .hero h1 .hl{
+    background:linear-gradient(transparent 60%,#ffd86b 60%);
+    padding:0 2px;
+  }
+  .hero h1 .pri{color:var(--c-primary-dark)}
+  .hero-sub{
+    margin-top:14px;color:var(--c-text-sub);font-size:15px;
+  }
+  .hero-visual{
+    margin:20px 0 16px;
+    aspect-ratio:16/9;
+    background:url('hero-staff.jpg') center/cover no-repeat;
+    border-radius:var(--radius);
+    box-shadow:var(--shadow-md);
+    position:relative;overflow:hidden;
+  }
+
+  .hero-ctas{
+    display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;
+  }
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    padding:16px 14px;border-radius:12px;font-weight:900;font-size:16px;
+    color:#fff;text-align:center;box-shadow:var(--shadow-md);
+    transition:transform .15s ease, box-shadow .15s ease;
+    position:relative;
+  }
+  .btn:active{transform:translateY(1px)}
+  .btn-tel{background:linear-gradient(180deg,#ff8a1f,var(--c-accent-dark))}
+  .btn-line{background:linear-gradient(180deg,#16d66a,var(--c-line-dark))}
+  .btn small{display:block;font-size:11px;font-weight:700;opacity:.95}
+  .btn .ic{font-size:20px}
+  .btn-tel .big{font-size:18px;letter-spacing:.02em}
+  .btn-wide{grid-column:1/-1}
+
+  .hero-trust{
+    margin-top:18px;background:#fff;border-radius:var(--radius);
+    padding:14px 14px;box-shadow:var(--shadow-sm);
+    display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;
+  }
+  .hero-trust li{
+    display:flex;align-items:flex-start;gap:8px;font-size:13px;font-weight:700;color:var(--c-text);
+  }
+  .hero-trust li::before{
+    content:"✓";color:#fff;background:var(--c-primary);
+    width:20px;height:20px;border-radius:50%;display:inline-grid;place-items:center;
+    font-size:12px;flex:0 0 20px;
+  }
+
+  /* ------------ 悩み共感 ------------ */
+  #worry{background:#fff}
+  .worry-list{
+    display:grid;grid-template-columns:1fr;gap:12px;
+  }
+  .worry-item{
+    display:flex;gap:12px;align-items:flex-start;
+    background:var(--c-primary-light);
+    padding:14px 16px;border-radius:12px;
+    border-left:4px solid var(--c-primary);
+  }
+  .worry-item .q{
+    flex:0 0 32px;height:32px;border-radius:50%;
+    background:var(--c-primary);color:#fff;display:grid;place-items:center;
+    font-weight:900;font-size:14px;
+  }
+  .worry-item p{font-size:14.5px;font-weight:700;line-height:1.6;color:var(--c-text)}
+  .worry-arrow{
+    text-align:center;margin-top:28px;font-weight:900;color:var(--c-primary-dark);
+    font-size:16px;
+  }
+  .worry-arrow::after{
+    content:"";display:block;margin:8px auto 0;width:0;height:0;
+    border-left:14px solid transparent;border-right:14px solid transparent;
+    border-top:16px solid var(--c-primary);
+  }
+
+  /* ------------ 選ばれる理由 ------------ */
+  #reason{background:var(--c-bg)}
+  .reason-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .reason-card{
+    background:var(--c-card);border-radius:var(--radius);
+    padding:20px;box-shadow:var(--shadow-sm);
+    border:1px solid var(--c-border);position:relative;
+  }
+  .reason-num{
+    position:absolute;top:-12px;left:16px;
+    background:var(--c-primary);color:#fff;
+    width:36px;height:36px;border-radius:50%;
+    display:grid;place-items:center;font-weight:900;font-size:16px;
+    box-shadow:var(--shadow-sm);
+  }
+  .reason-card h3{
+    font-size:17px;font-weight:900;margin:10px 0 8px;color:var(--c-primary-dark);
+  }
+  .reason-card p{font-size:14px;color:var(--c-text-sub);line-height:1.75}
+
+  /* ------------ サービス一覧 ------------ */
+  #service{background:#fff}
+  .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .service-card{
+    background:var(--c-primary-light);
+    border-radius:12px;padding:16px 12px;text-align:center;
+    border:1px solid var(--c-border);
+    transition:transform .15s;
+  }
+  .service-card:hover{transform:translateY(-2px)}
+  .service-ic{
+    width:48px;height:48px;margin:0 auto 8px;
+    background:#fff;border-radius:50%;display:grid;place-items:center;
+    font-size:24px;box-shadow:var(--shadow-sm);
+  }
+  .service-card h3{font-size:14px;font-weight:900;color:var(--c-primary-dark);margin-bottom:4px}
+  .service-card p{font-size:11.5px;color:var(--c-text-sub);line-height:1.5}
+
+  /* ------------ 症状別 ------------ */
+  #symptom{background:var(--c-bg)}
+  .symptom-list{display:grid;grid-template-columns:1fr;gap:14px}
+  .symptom-card{
+    background:#fff;border-radius:var(--radius);
+    padding:18px;box-shadow:var(--shadow-sm);
+    display:flex;gap:14px;align-items:flex-start;
+    border:1px solid var(--c-border);
+  }
+  .symptom-card .ic{
+    flex:0 0 48px;height:48px;border-radius:10px;
+    background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));
+    color:#fff;display:grid;place-items:center;font-size:22px;
+  }
+  .symptom-card h3{font-size:16px;font-weight:900;margin-bottom:4px;color:var(--c-text)}
+  .symptom-card p{font-size:13.5px;color:var(--c-text-sub);line-height:1.7}
+  .symptom-card .tag{
+    display:inline-block;margin-top:8px;
+    background:#fff4e6;color:var(--c-accent-dark);
+    font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;
+  }
+
+  /* ------------ 料金 ------------ */
+  #pricing{background:#fff}
+  .price-intro{
+    background:var(--c-primary-light);border-radius:var(--radius);
+    padding:16px;margin-bottom:20px;
+    border-left:4px solid var(--c-primary);
+    font-size:13.5px;color:var(--c-text);font-weight:700;line-height:1.75;
+  }
+  .price-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .price-card{
+    background:#fff;border:2px solid var(--c-border);border-radius:var(--radius);
+    padding:20px;position:relative;
+  }
+  .price-card.recommend{
+    border-color:var(--c-accent);
+    background:linear-gradient(180deg,#fff9f2,#fff);
+  }
+  .price-card.recommend::before{
+    content:"おすすめ";position:absolute;top:-12px;right:16px;
+    background:var(--c-accent);color:#fff;font-size:12px;font-weight:900;
+    padding:4px 12px;border-radius:999px;
+  }
+  .price-card h3{
+    font-size:16px;font-weight:900;color:var(--c-primary-dark);margin-bottom:6px;
+  }
+  .price-card .desc{font-size:13px;color:var(--c-text-sub);margin-bottom:12px;line-height:1.65}
+  .price-card .amount{
+    display:flex;align-items:baseline;gap:4px;
+    color:var(--c-text);
+    border-top:1px dashed var(--c-border);padding-top:10px;
+  }
+  .price-card .amount .from{font-size:12px;color:var(--c-text-sub);font-weight:700}
+  .price-card .amount .num{font-size:28px;font-weight:900;color:var(--c-primary-dark)}
+  .price-card .amount .unit{font-size:13px;font-weight:700}
+  .price-card .amount .tax{font-size:11px;color:var(--c-text-sub);margin-left:4px}
+  .price-note{
+    margin-top:16px;background:#fff8e6;border:1px solid #ffe9a8;
+    border-radius:12px;padding:14px;font-size:13px;font-weight:700;color:#7a5a00;line-height:1.75;
+  }
+  .price-note strong{color:#c46b00}
+
+  /* ------------ 流れ ------------ */
+  #flow{background:var(--c-bg)}
+  .flow-list{display:grid;grid-template-columns:1fr;gap:14px;position:relative}
+  .flow-item{
+    background:#fff;border-radius:var(--radius);padding:18px 18px 18px 70px;
+    box-shadow:var(--shadow-sm);position:relative;border:1px solid var(--c-border);
+  }
+  .flow-num{
+    position:absolute;left:16px;top:16px;
+    width:40px;height:40px;border-radius:50%;
+    background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));
+    color:#fff;display:grid;place-items:center;font-weight:900;font-size:16px;
+  }
+  .flow-item h3{font-size:15px;font-weight:900;color:var(--c-primary-dark);margin-bottom:4px}
+  .flow-item p{font-size:13px;color:var(--c-text-sub);line-height:1.7}
+
+  /* ------------ お客様の声 ------------ */
+  #voice{background:#fff}
+  .voice-grid{display:grid;grid-template-columns:1fr;gap:14px}
+  .voice-card{
+    background:var(--c-primary-light);border-radius:var(--radius);padding:18px;
+    border:1px solid var(--c-border);
+  }
+  .voice-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+  .voice-avatar{
+    width:44px;height:44px;border-radius:50%;
+    background:linear-gradient(135deg,#9fc6ed,var(--c-primary));
+    color:#fff;display:grid;place-items:center;font-weight:900;
+  }
+  .voice-meta{font-size:12px;color:var(--c-text-sub);font-weight:700}
+  .voice-meta strong{display:block;color:var(--c-text);font-size:14px}
+  .voice-stars{color:#ffb400;font-size:14px;margin-bottom:6px}
+  .voice-card h3{font-size:15px;font-weight:900;margin-bottom:6px;color:var(--c-primary-dark);line-height:1.5}
+  .voice-card p{font-size:13.5px;color:var(--c-text);line-height:1.75}
+
+  /* ------------ FAQ ------------ */
+  #faq{background:var(--c-bg)}
+  .faq-list{display:grid;gap:10px}
+  .faq-item{
+    background:#fff;border-radius:12px;border:1px solid var(--c-border);
+    overflow:hidden;box-shadow:var(--shadow-sm);
+  }
+  .faq-q{
+    width:100%;background:none;border:none;text-align:left;cursor:pointer;
+    padding:16px 48px 16px 52px;font-size:15px;font-weight:900;color:var(--c-text);
+    position:relative;line-height:1.5;font-family:inherit;
+  }
+  .faq-q::before{
+    content:"Q";position:absolute;left:16px;top:14px;
+    width:28px;height:28px;border-radius:50%;
+    background:var(--c-primary);color:#fff;
+    display:grid;place-items:center;font-size:13px;
+  }
+  .faq-q::after{
+    content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);
+    font-size:22px;color:var(--c-primary);font-weight:900;transition:transform .2s;
+  }
+  .faq-item.open .faq-q::after{content:"−"}
+  .faq-a{
+    max-height:0;overflow:hidden;transition:max-height .3s ease;
+    padding:0 20px 0 52px;font-size:13.5px;color:var(--c-text-sub);line-height:1.8;
+    position:relative;
+  }
+  .faq-a-inner{padding:0 0 16px}
+  .faq-a::before{
+    content:"A";position:absolute;left:16px;top:0;
+    width:28px;height:28px;border-radius:50%;
+    background:#fff;border:2px solid var(--c-primary);color:var(--c-primary);
+    display:grid;place-items:center;font-size:13px;font-weight:900;
+  }
+  .faq-item.open .faq-a{max-height:500px}
+
+  /* ------------ 中間 CTA ------------ */
+  .cta-band{
+    background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));
+    padding:36px 0;color:#fff;
+  }
+  .cta-band .container{text-align:center}
+  .cta-band h2{font-size:22px;font-weight:900;line-height:1.5;margin-bottom:6px}
+  .cta-band p{font-size:14px;opacity:.95;margin-bottom:18px}
+  .cta-band .hero-ctas{max-width:520px;margin:0 auto}
+  .cta-band .hero-trust{background:rgba(255,255,255,.12);margin-top:16px}
+  .cta-band .hero-trust li{color:#fff}
+  .cta-band .hero-trust li::before{background:#fff;color:var(--c-primary-dark)}
+
+  /* ------------ 最終CTA ------------ */
+  #final-cta{
+    background:
+      radial-gradient(800px 300px at 50% 0,rgba(255,255,255,.15),transparent),
+      linear-gradient(180deg,var(--c-primary-dark),#033567);
+    color:#fff;padding:56px 0 80px;text-align:center;
+  }
+  #final-cta h2{font-size:24px;font-weight:900;line-height:1.5;margin-bottom:10px}
+  #final-cta h2 .hl{
+    background:linear-gradient(transparent 60%,#ffd86b 60%);
+    color:#0a2a4d;padding:0 4px;
+  }
+  #final-cta .lead{font-size:14px;opacity:.95;margin-bottom:24px}
+  #final-cta .hero-ctas{max-width:520px;margin:0 auto}
+  #final-cta .hero-trust{
+    max-width:520px;margin:20px auto 0;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);
+  }
+  #final-cta .hero-trust li{color:#fff}
+  #final-cta .hero-trust li::before{background:#fff;color:var(--c-primary-dark)}
+  .final-close{margin-top:24px;font-size:15px;font-weight:700}
+
+  /* ------------ フッター ------------ */
+  footer{background:#041f3d;color:#9fb4cc;padding:28px 0 100px;font-size:12px;text-align:center}
+  footer .shop{color:#fff;font-size:15px;font-weight:900;margin-bottom:8px}
+  footer a{color:#9fb4cc;text-decoration:underline}
+
+  /* ------------ 固定フッターCTA (SP) ------------ */
+  .fixed-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:100;
+    background:rgba(255,255,255,.98);
+    border-top:1px solid var(--c-border);
+    padding:8px;display:grid;grid-template-columns:1fr 1fr;gap:8px;
+    box-shadow:0 -4px 16px rgba(0,0,0,.08);
+  }
+  .fixed-cta a{
+    padding:12px;border-radius:10px;color:#fff;font-weight:900;font-size:14px;
+    display:flex;align-items:center;justify-content:center;gap:6px;
+  }
+  .fixed-cta .tel{background:var(--c-accent)}
+  .fixed-cta .line{background:var(--c-line)}
+
+  /* ------------ PC 調整 ------------ */
+  @media (min-width:768px){
+    body{font-size:16px}
+    .section{padding:80px 0}
+    .section-head h2{font-size:32px}
+    .hero{padding:56px 0 48px}
+    .hero-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center}
+    .hero-visual{margin:0;aspect-ratio:4/3}
+    .hero h1{font-size:38px;line-height:1.3}
+    .hero-sub{font-size:17px}
+    .hero-ctas{grid-template-columns:1fr 1fr;gap:14px}
+    .btn{padding:18px 16px;font-size:17px}
+    .btn-tel .big{font-size:22px}
+    .hero-trust{grid-template-columns:repeat(3,1fr);margin-top:22px}
+    .worry-list{grid-template-columns:1fr 1fr}
+    .reason-grid{grid-template-columns:1fr 1fr}
+    .service-grid{grid-template-columns:repeat(4,1fr)}
+    .service-card{padding:22px 16px}
+    .service-ic{width:60px;height:60px;font-size:30px}
+    .service-card h3{font-size:15px}
+    .symptom-list{grid-template-columns:1fr 1fr}
+    .price-grid{grid-template-columns:repeat(2,1fr)}
+    .flow-list{grid-template-columns:repeat(3,1fr)}
+    .voice-grid{grid-template-columns:repeat(3,1fr)}
+    #final-cta h2{font-size:32px}
+    .fixed-cta{display:none}
+    footer{padding:32px 0}
+  }
+  @media (min-width:1024px){
+    .price-grid{grid-template-columns:repeat(4,1fr)}
+  }
+
+  /* Reduced motion */
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">匠</span>
+      <span>配管洗浄・詰まり抜き専門店</span>
+    </a>
+    <div class="header-cta">
+      <!-- tel: IVRy 050-1725-6168 / 0120取得時はここを差し替え -->
+      <a class="tel" href="tel:05017256168">📞 電話</a>
+      <!-- LINE: 公式アカウント開設後にURLを差し替え -->
+      <a class="line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener">LINE</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="top" class="hero">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badges">
+        <div class="hero-badge"><span class="dot"></span>本日のご相談・見積り受付中</div>
+        <div class="hero-badge exp">🛠 年間口コミ <span class="num">100件以上</span></div>
+      </div>
+      <h1>
+        <span class="hl">「料金が不安」</span>な方こそ、<br />
+        <span class="pri">配管洗浄の専門店</span>へ<br />
+        ご相談ください。
+      </h1>
+      <p class="hero-sub">
+        見積り後に作業／追加費用は必ず事前説明。<br />
+        キッチン・浴室・洗面・洗濯機から屋外排水管まで、<br />
+        戸建ての排水トラブルを、明朗会計で根本から解決します。
+      </p>
+
+      <!-- PC用ビジュアル (SPでは下に配置) -->
+      <div class="hero-visual" aria-hidden="true"></div>
+
+      <div class="hero-ctas">
+        <!-- tel: IVRy 050-1725-6168 / 0120取得時はここを差し替え -->
+        <a class="btn btn-tel" href="tel:05017256168" data-cta="hero-tel">
+          <span class="ic">📞</span>
+          <span>
+            <small>お電話はこちら</small>
+            <span class="big">050-1725-6168</span>
+          </span>
+        </a>
+        <!-- LINE: 公式アカウント開設後にURLを差し替え -->
+        <a class="btn btn-line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener" data-cta="hero-line">
+          <span class="ic">💬</span>
+          <span>
+            <small>写真を送るだけ</small>
+            <span class="big">LINEで相談</span>
+          </span>
+        </a>
+      </div>
+
+      <ul class="hero-trust">
+        <li>見積り後に作業</li>
+        <li>追加費用は事前説明</li>
+        <li>戸建ての屋外排水管OK</li>
+        <li>悪臭・ボコボコ音対応</li>
+        <li>地域密着・迅速対応</li>
+        <li>しつこい営業なし</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 悩み共感 ============ -->
+<section id="worry" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">CHECK LIST</span>
+      <h2>こんな<span>排水のお悩み</span>ありませんか？</h2>
+      <p>ひとつでも当てはまる方は、早めのご相談をおすすめします。</p>
+    </div>
+    <ul class="worry-list">
+      <li class="worry-item"><span class="q">✓</span><p>キッチンで水を流すと、シンクに溜まって流れるのが遅い</p></li>
+      <li class="worry-item"><span class="q">✓</span><p>排水口から「ゴボゴボ」「ボコボコ」と音がする</p></li>
+      <li class="worry-item"><span class="q">✓</span><p>排水口やお風呂場から、下水のような嫌な臭いがする</p></li>
+      <li class="worry-item"><span class="q">✓</span><p>外の排水マス(汚水マス)が汚れている・詰まっていそう</p></li>
+      <li class="worry-item"><span class="q">✓</span><p>突然、水が流れなくなった/逆流してしまった</p></li>
+      <li class="worry-item"><span class="q">✓</span><p>どこに頼めばいいかわからない・業者選びが不安</p></li>
+    </ul>
+    <p class="worry-arrow">その症状、配管洗浄の専門店「匠」にお任せください</p>
+  </div>
+</section>
+
+<!-- ============ 選ばれる理由 ============ -->
+<section id="reason" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">REASON</span>
+      <h2>匠が<span>選ばれる理由</span></h2>
+      <p>「安さ」だけではなく、「安心」と「専門性」で選ばれています。</p>
+    </div>
+    <div class="reason-grid">
+      <div class="reason-card">
+        <span class="reason-num">01</span>
+        <h3>配管洗浄・詰まり抜きの専門店</h3>
+        <p>水漏れ修理の片手間ではなく、排水トラブルの解決だけを専門にしています。蓄積した経験から、原因に合わせた最適な洗浄方法をご提案できます。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-num">02</span>
+        <h3>必ず見積り後に作業開始</h3>
+        <p>現地で状況を確認し、作業内容・金額を丁寧にご説明してから着手します。ご納得いただけない場合は作業いたしませんので、ご安心ください。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-num">03</span>
+        <h3>追加費用は"必ず"事前説明</h3>
+        <p>作業を進める中で追加対応が必要になった場合も、必ず一度手を止めてご説明・ご確認します。勝手に作業を進めて後から請求することはありません。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-num">04</span>
+        <h3>戸建ての屋外排水管まで確認</h3>
+        <p>室内だけで原因が分からない場合も、屋外の排水マス・本管までしっかり調査。戸建て特有のトラブルの"本当の原因"を見逃しません。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-num">05</span>
+        <h3>高圧洗浄ありきではない最適提案</h3>
+        <p>症状によっては高圧洗浄が不要なケースもあります。状況を見極めて、必要最小限の作業でしっかり直すことをお約束します。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-num">06</span>
+        <h3>しつこい営業・押し売り一切なし</h3>
+        <p>「ついでに他もやりませんか」といった不要な提案はしません。今困っている症状を解決することだけに集中します。</p>
+      </div>
+      <div class="reason-card">
+        <span class="reason-num">07</span>
+        <h3>年間口コミ100件以上の"実戦派"専門店</h3>
+        <p>年間100件を超えるお客様からの口コミをいただいている、現場経験豊富な専門店です。机上の知識ではなく、実際の施工で培った判断力が強みです。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 中間CTA 1 ============ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>見積り後に作業／<br class="sp-only" />納得いただいてから着手します</h2>
+    <p>相談・お見積りは無料。まずはお気軽にお問い合わせください。</p>
+    <div class="hero-ctas">
+      <a class="btn btn-tel" href="tel:05017256168" data-cta="mid1-tel">
+        <span class="ic">📞</span>
+        <span><small>受付中</small><span class="big">電話で相談</span></span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener" data-cta="mid1-line">
+        <span class="ic">💬</span>
+        <span><small>24時間受付</small><span class="big">LINEで相談</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ サービス一覧 ============ -->
+<section id="service" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">SERVICE</span>
+      <h2>対応<span>サービス一覧</span></h2>
+      <p>戸建て住宅の排水まわり、まとめてお任せいただけます。</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <div class="service-ic">🧼</div>
+        <h3>キッチン排水</h3>
+        <p>油汚れによる詰まりや流れ不良を解消</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">🛁</div>
+        <h3>浴室排水</h3>
+        <p>髪の毛・皮脂汚れによる詰まりに対応</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">🚿</div>
+        <h3>洗面台排水</h3>
+        <p>ヘドロ・髪の毛の詰まりを徹底洗浄</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">🧺</div>
+        <h3>洗濯機排水</h3>
+        <p>洗剤カスや繊維の蓄積を解消</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">🏠</div>
+        <h3>屋外排水管の高圧洗浄</h3>
+        <p>戸建ての屋外配管をまるごと洗浄</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">💨</div>
+        <h3>悪臭・逆流・ゴボゴボ音改善</h3>
+        <p>原因を特定して根本から解消</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">🛠</div>
+        <h3>緊急の詰まり対応</h3>
+        <p>急な詰まりにも迅速にかけつけます</p>
+      </div>
+      <div class="service-card">
+        <div class="service-ic">📅</div>
+        <h3>定期メンテナンス</h3>
+        <p>トラブルを未然に防ぐ予防洗浄</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 症状別の案内 ============ -->
+<section id="symptom" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">SYMPTOM</span>
+      <h2>症状別の<span>原因と対応</span></h2>
+      <p>症状ごとに考えられる原因と、匠の対応方針をご説明します。</p>
+    </div>
+    <div class="symptom-list">
+      <div class="symptom-card">
+        <div class="ic">🔊</div>
+        <div>
+          <h3>ボコボコ音がする</h3>
+          <p>排水管の奥で詰まりが進行し、空気の通り道が狭くなっているサインです。放置すると完全詰まりの原因に。早めの洗浄がおすすめです。</p>
+          <span class="tag">早期対応で悪化を防止</span>
+        </div>
+      </div>
+      <div class="symptom-card">
+        <div class="ic">🐌</div>
+        <div>
+          <h3>流れが悪い・遅い</h3>
+          <p>油汚れ・石けんカス・髪の毛などの蓄積が主な原因。高圧洗浄でしっかり管の内側まで洗い流し、本来の流れを取り戻します。</p>
+          <span class="tag">室内外まとめて確認</span>
+        </div>
+      </div>
+      <div class="symptom-card">
+        <div class="ic">🌊</div>
+        <div>
+          <h3>水が逆流する</h3>
+          <p>屋外排水管・排水マスの詰まりが疑われます。戸建て特有のトラブルで、屋外側まで調査しないと根本解決しません。</p>
+          <span class="tag">屋外排水管の調査必須</span>
+        </div>
+      </div>
+      <div class="symptom-card">
+        <div class="ic">👃</div>
+        <div>
+          <h3>悪臭がする</h3>
+          <p>排水管内部にヘドロ・汚れが蓄積しているケースがほとんど。原因箇所を特定し、臭いのもとから除去します。</p>
+          <span class="tag">ニオイの元から解消</span>
+        </div>
+      </div>
+      <div class="symptom-card">
+        <div class="ic">🔁</div>
+        <div>
+          <h3>何度も詰まる</h3>
+          <p>表面的な詰まり除去だけで済ませていると再発します。配管全体の状況を確認し、根本原因を見極めてご提案します。</p>
+          <span class="tag">根本原因から解決</span>
+        </div>
+      </div>
+      <div class="symptom-card">
+        <div class="ic">💧</div>
+        <div>
+          <h3>外の排水マスが汚れている</h3>
+          <p>屋外排水マスの汚れや詰まりは、室内の流れ不良にも直結します。高圧洗浄で管内部までしっかり洗浄可能です。</p>
+          <span class="tag">屋外から本管まで対応</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 料金 ============ -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">PRICE</span>
+      <h2>わかりやすい<span>料金の考え方</span></h2>
+      <p>料金は作業内容に応じた明朗会計。現地で必ず事前にご説明します。</p>
+    </div>
+
+    <div class="price-intro">
+      配管のトラブルは、症状・詰まりの深さ・配管の長さ・築年数などによって最適な作業内容が変わります。<br />
+      そのため匠では、<strong>現地で状況を確認し、作業内容と金額を必ず事前にご説明してから</strong>作業を開始します。
+    </div>
+
+    <!-- 本番仕様: 4プラン(レンジ表記・税込・出張費込) -->
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>① 軽度の詰まり対応</h3>
+        <p class="desc">薬剤処理や部分的な詰まり除去で改善できる、比較的軽度なケース。</p>
+        <div class="amount">
+          <span class="from">¥</span>
+          <span class="num">16,500</span>
+          <span class="unit">〜</span>
+          <span class="num">27,500</span>
+          <span class="tax">(税込・出張費込)</span>
+        </div>
+      </div>
+      <div class="price-card">
+        <h3>② 高圧洗浄(単系統)</h3>
+        <p class="desc">キッチン・洗面・風呂など、症状のある1系統を高圧洗浄でしっかり洗い流します。</p>
+        <div class="amount">
+          <span class="from">¥</span>
+          <span class="num">33,000</span>
+          <span class="unit">〜</span>
+          <span class="num">55,000</span>
+          <span class="tax">(税込・出張費込)</span>
+        </div>
+      </div>
+      <div class="price-card">
+        <h3>③ 屋外排水管を含む洗浄</h3>
+        <p class="desc">戸建て向け。屋内だけでなく屋外排水マス・屋外配管まで含めて洗浄。</p>
+        <div class="amount">
+          <span class="from">¥</span>
+          <span class="num">44,000</span>
+          <span class="unit">〜</span>
+          <span class="num">66,000</span>
+          <span class="tax">(税込・出張費込)</span>
+        </div>
+      </div>
+      <div class="price-card recommend">
+        <h3>④ 戸建て排水管フルメンテ<br /><small>— 匠コース —</small></h3>
+        <p class="desc">家中の排水経路を一括で点検・洗浄。施工写真・所見書・屋外枡確認・<strong>6ヶ月保証</strong>付き。予防メンテにも最適。</p>
+        <div class="amount">
+          <span class="from">¥</span>
+          <span class="num">66,000</span>
+          <span class="unit">〜</span>
+          <span class="num">110,000</span>
+          <span class="tax">(税込・出張費込)</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-note">
+      ※現地の状況(築年数・配管の長さ・汚れの蓄積度)によって、同じプラン内でも金額は変動します。<br />
+      <strong>現地確認のうえ、作業内容と金額をご説明 → ご納得いただいてから作業開始</strong>を徹底しています。<br />
+      作業中に追加が必要になった場合も、必ず事前にご説明いたします。勝手に作業を進めることはありません。<br />
+      <strong>現地調査・お見積りは無料</strong>です(対応エリア内)。
+    </div>
+  </div>
+</section>
+
+<!-- ============ 中間CTA 2 ============ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>金額が不安な方こそ<br class="sp-only" />まずはご相談を</h2>
+    <p>料金の仕組みから、丁寧にお答えします。</p>
+    <div class="hero-ctas">
+      <a class="btn btn-tel" href="tel:05017256168" data-cta="mid2-tel">
+        <span class="ic">📞</span>
+        <span><small>受付中</small><span class="big">電話で相談</span></span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener" data-cta="mid2-line">
+        <span class="ic">💬</span>
+        <span><small>写真OK</small><span class="big">LINEで相談</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 依頼の流れ ============ -->
+<section id="flow" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FLOW</span>
+      <h2>ご依頼の<span>流れ</span></h2>
+      <p>はじめての方でも安心してご利用いただけます。</p>
+    </div>
+    <div class="flow-list">
+      <div class="flow-item">
+        <span class="flow-num">1</span>
+        <h3>お問い合わせ</h3>
+        <p>お電話またはLINEでご連絡ください。症状・ご希望日時をお聞きします。</p>
+      </div>
+      <div class="flow-item">
+        <span class="flow-num">2</span>
+        <h3>症状の確認</h3>
+        <p>詰まりや音、臭いなどの状況をヒアリング。LINEなら写真・動画送付も可能です。</p>
+      </div>
+      <div class="flow-item">
+        <span class="flow-num">3</span>
+        <h3>現地確認・お見積り</h3>
+        <p>ご訪問し原因を調査。作業内容と金額を分かりやすくご説明します。</p>
+      </div>
+      <div class="flow-item">
+        <span class="flow-num">4</span>
+        <h3>ご納得後に作業</h3>
+        <p>内容と金額にご納得いただいてから、丁寧に作業を開始します。</p>
+      </div>
+      <div class="flow-item">
+        <span class="flow-num">5</span>
+        <h3>作業完了・ご説明</h3>
+        <p>作業内容をお客様と一緒に確認。再発防止のアドバイスもお伝えします。</p>
+      </div>
+      <div class="flow-item">
+        <span class="flow-num">6</span>
+        <h3>お支払い</h3>
+        <p>作業完了後、現金またはお選びのお支払い方法にて精算いたします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ お客様の声 ============ -->
+<section id="voice" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">VOICE</span>
+      <h2>お客様の<span>声</span></h2>
+      <p>開業記念として、口コミを募集しています。</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card" style="grid-column:1/-1;text-align:center;padding:40px 20px;">
+        <p style="font-size:18px;font-weight:700;color:var(--c-primary-dark);margin-bottom:12px;">📝 お客様の声を募集中</p>
+        <p style="font-size:14px;color:var(--c-text-sub);line-height:1.8;">
+          匠では、ご利用いただいたお客様からのご感想を募集しております。<br />
+          施工後にスタッフからご案内させていただきます。<br />
+          いただいた口コミは、今後このページでご紹介予定です。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 中間CTA 3 ============ -->
+<section class="cta-band">
+  <div class="container">
+    <h2>「うちも同じ症状かも」と<br class="sp-only" />思ったら</h2>
+    <p>専門スタッフが丁寧にお答えします。</p>
+    <div class="hero-ctas">
+      <a class="btn btn-tel" href="tel:05017256168" data-cta="mid3-tel">
+        <span class="ic">📞</span>
+        <span><small>受付中</small><span class="big">電話で相談</span></span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener" data-cta="mid3-line">
+        <span class="ic">💬</span>
+        <span><small>写真OK</small><span class="big">LINEで相談</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">FAQ</span>
+      <h2>よくある<span>ご質問</span></h2>
+      <p>ご不安な点はお気軽にご質問ください。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">見積りだけでも大丈夫ですか？</button>
+        <div class="faq-a"><div class="faq-a-inner">もちろん大丈夫です。お見積り後、内容や金額にご納得いただけない場合は作業いたしません。しつこい営業などもございませんので、お気軽にご相談ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">追加料金がかかることはありますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">現地の状況により追加対応が必要になる場合はありますが、その際は必ず一度手を止めてご説明し、ご了承をいただいてから進めます。勝手に作業を進めて、後から追加請求することは一切ありません。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">戸建て以外も対応していますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">マンション・アパート・店舗などの排水洗浄にも対応可能です。ただし建物の構造や共用部の都合により対応範囲が変わる場合があるため、一度ご相談ください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">夜間や急ぎでも来てもらえますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">できる限り迅速に対応いたします。お急ぎの場合はまずお電話ください。スケジュールを確認し、最短での訪問日時をご案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">高圧洗浄で必ず直りますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">多くの流れ不良・詰まりは高圧洗浄で改善しますが、配管の破損や勾配不良など構造的な問題がある場合は別の対応が必要です。その際は原因と対処方法を分かりやすくご説明します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">どんな支払い方法がありますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">現金のほか、お選びいただけるお支払い方法をご用意しています。詳細はお見積り時にご案内いたしますので、お気軽にお尋ねください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">作業にはどのくらい時間がかかりますか？</button>
+        <div class="faq-a"><div class="faq-a-inner">症状や作業内容により異なりますが、軽度な詰まりで30分〜、屋外排水管を含む高圧洗浄で1〜2時間程度が目安です。現地確認時に詳しくご案内します。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">予防のための洗浄はおすすめですか？</button>
+        <div class="faq-a"><div class="faq-a-inner">詰まってから対応するより、定期的なメンテナンスのほうが費用も手間も抑えられるケースが多いです。戸建てなら1〜3年に1回の屋外排水管洗浄をおすすめしています。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 最終CTA ============ -->
+<section id="final-cta">
+  <div class="container">
+    <h2>
+      まずは症状を<br />
+      <span class="hl">お気軽にご相談ください</span>
+    </h2>
+    <p class="lead">
+      電話でもLINEでも、ご相談・お見積りは無料です。<br />
+      「見積りだけ」「料金の相談だけ」でも大歓迎です。
+    </p>
+    <div class="hero-ctas">
+      <a class="btn btn-tel" href="tel:05017256168" data-cta="final-tel">
+        <span class="ic">📞</span>
+        <span>
+          <small>お電話はこちら</small>
+          <span class="big">050-1725-6168</span>
+        </span>
+      </a>
+      <a class="btn btn-line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener" data-cta="final-line">
+        <span class="ic">💬</span>
+        <span>
+          <small>24時間受付</small>
+          <span class="big">LINEで相談</span>
+        </span>
+      </a>
+    </div>
+    <ul class="hero-trust">
+      <li>見積り後に作業</li>
+      <li>追加費用は事前説明</li>
+      <li>屋外排水管までOK</li>
+      <li>悪臭・音・詰まり対応</li>
+      <li>地域密着・迅速対応</li>
+      <li>しつこい営業なし</li>
+    </ul>
+    <p class="final-close">「うちの症状、これ大丈夫？」という段階からご相談OKです。</p>
+  </div>
+</section>
+
+<!-- ============ フッター ============ -->
+<footer>
+  <div class="container">
+    <div class="shop">配管洗浄・詰まり抜き専門店 匠</div>
+    <!-- 差し替え: 会社情報 -->
+    <p>対応エリア：〇〇県〇〇市・近隣エリア ／ 営業時間：8:00〜20:00 ／ 定休日：年中無休</p>
+    <p style="margin-top:6px">TEL：<a href="tel:05017256168">050-1725-6168</a></p>
+    <p style="margin-top:14px;opacity:.7">© 配管洗浄・詰まり抜き専門店 匠</p>
+  </div>
+</footer>
+
+<!-- ============ 固定フッター (SP) ============ -->
+<nav class="fixed-cta" aria-label="お問い合わせ">
+  <a class="tel" href="tel:05017256168" data-cta="fixed-tel">📞 電話する</a>
+  <a class="line" href="https://lin.ee/zw0OS3N" target="_blank" rel="noopener" data-cta="fixed-line">💬 LINEで相談</a>
+</nav>
+
+<script>
+  /* FAQ アコーディオン */
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      item.classList.toggle('open');
+    });
+  });
+
+  /* スクロール時にヘッダー影 */
+  const header = document.querySelector('.header');
+  const onScroll = () => {
+    if (window.scrollY > 20) header.style.boxShadow = '0 2px 10px rgba(0,0,0,.06)';
+    else header.style.boxShadow = 'none';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* CTA計測用フック(差し替え先でGA等に接続可) */
+  document.querySelectorAll('[data-cta]').forEach(el => {
+    el.addEventListener('click', () => {
+      // 例: window.gtag && gtag('event','cta_click',{label: el.dataset.cta});
+    });
+  });
+</script>
+</body>
+</html>
