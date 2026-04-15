@@ -384,6 +384,29 @@
   .voice-card h3{font-size:15px;font-weight:900;margin-bottom:6px;color:var(--c-primary-dark);line-height:1.5}
   .voice-card p{font-size:13.5px;color:var(--c-text);line-height:1.75}
 
+  /* ------------ 対応エリア ------------ */
+  #area{background:#fff}
+  .area-box{
+    max-width:820px;margin:0 auto;background:var(--c-bg);
+    border:1px solid var(--c-border);border-radius:16px;
+    padding:28px 24px;box-shadow:var(--shadow-sm);
+  }
+  .area-main{text-align:center;margin-bottom:18px;padding-bottom:18px;border-bottom:1px dashed var(--c-border)}
+  .area-label{font-size:13px;font-weight:900;color:var(--c-primary-dark);margin-bottom:8px;letter-spacing:.05em}
+  .area-prefs{font-size:18px;font-weight:900;color:var(--c-text);line-height:1.7;margin-bottom:8px}
+  .area-prefs strong{color:var(--c-primary-dark)}
+  .area-note{font-size:13px;color:var(--c-text-sub);line-height:1.7}
+  .area-list{list-style:none;padding:0;display:grid;gap:10px;margin-bottom:18px}
+  .area-list li{
+    font-size:13.5px;color:var(--c-text);line-height:1.7;
+    padding:10px 14px 10px 34px;background:#fff;border-radius:10px;
+    position:relative;border:1px solid var(--c-border);
+  }
+  .area-list li::before{
+    content:"📍";position:absolute;left:10px;top:8px;font-size:14px;
+  }
+  .area-cta-note{font-size:12.5px;color:var(--c-text-sub);text-align:center;line-height:1.7}
+
   /* ------------ FAQ ------------ */
   #faq{background:var(--c-bg)}
   .faq-list{display:grid;gap:10px}
@@ -542,6 +565,7 @@
       <a href="#reason">選ばれる理由</a>
       <a href="#pricing">料金</a>
       <a href="#flow">流れ</a>
+      <a href="#area">エリア</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="header-cta">
@@ -558,6 +582,7 @@
     <a href="#reason" onclick="closeSPMenu()">選ばれる理由</a>
     <a href="#pricing" onclick="closeSPMenu()">料金</a>
     <a href="#flow" onclick="closeSPMenu()">流れ</a>
+    <a href="#area" onclick="closeSPMenu()">エリア</a>
     <a href="#faq" onclick="closeSPMenu()">FAQ</a>
     <div class="sp-menu-cta">
       <a class="tel" href="tel:05017256168">📞 電話する</a>
@@ -1035,6 +1060,33 @@
   </div>
 </section>
 
+<!-- ============ 対応エリア ============ -->
+<section id="area" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">AREA</span>
+      <h2>対応<span>エリア</span></h2>
+      <p>名古屋市を拠点に、近郊エリアへ出張対応しています。</p>
+    </div>
+    <div class="area-box">
+      <div class="area-main">
+        <p class="area-label">🚐 出張対応エリア</p>
+        <p class="area-prefs"><strong>愛知県全域</strong> / <strong>岐阜県</strong> / <strong>三重県の一部</strong></p>
+        <p class="area-note">拠点から概ね60km圏内を目安にしています。エリア外も一度ご相談ください。</p>
+      </div>
+      <ul class="area-list">
+        <li>名古屋市全域(中村・中川・港・南・緑・天白・昭和・千種・東・北・西・守山・名東・瑞穂・熱田・中)</li>
+        <li>尾張地方(一宮・稲沢・清須・北名古屋・春日井・小牧・犬山・江南 ほか)</li>
+        <li>知多半島(東海・大府・知多・半田・常滑・東浦 ほか)</li>
+        <li>西三河(豊田・岡崎・刈谷・安城・知立 ほか)</li>
+        <li>岐阜県南部(岐阜市・各務原・羽島・大垣 ほか)</li>
+        <li>三重県北部(桑名・四日市・いなべ ほか)</li>
+      </ul>
+      <p class="area-cta-note">※ 上記以外のエリアもご相談可能です。出張費の目安は電話・LINEでお気軽にお問い合わせください。</p>
+    </div>
+  </div>
+</section>
+
 <!-- ============ 最終CTA ============ -->
 <section id="final-cta">
   <div class="container">
@@ -1125,22 +1177,10 @@
       const isTel  = ctaValue.includes('tel');
       const isLine = ctaValue.includes('line');
 
-      if (isTel) {
-        gtag('event', 'phone_tap', { cta_location: ctaValue });
-        /* Google広告 電話タップCV */
-        gtag('event', 'conversion', {
-          send_to: 'AW-396980754/phone_tap',
-          event_callback: function(){}
-        });
-      }
-      if (isLine) {
-        gtag('event', 'line_tap', { cta_location: ctaValue });
-        /* Google広告 LINEタップCV */
-        gtag('event', 'conversion', {
-          send_to: 'AW-396980754/line_tap',
-          event_callback: function(){}
-        });
-      }
+      /* GA4にイベント送信 → GA4側で「コンバージョン」として設定済み
+         → Google広告(AW-396980754)はGA4からインポート */
+      if (isTel)  gtag('event', 'phone_tap', { cta_location: ctaValue });
+      if (isLine) gtag('event', 'line_tap',  { cta_location: ctaValue });
     });
   });
 
