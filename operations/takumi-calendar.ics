@@ -1,0 +1,83 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//takumi-haikan//operations-rhythm//JP
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:匠 運用リズム
+X-WR-TIMEZONE:Asia/Tokyo
+X-WR-CALDESC:配管洗浄専門店 匠のデイリー/ウィークリー/マンスリー運用リマインダー
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+BEGIN:STANDARD
+DTSTART:19700101T000000
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:takumi-daily-log@takumi-haikan.com
+DTSTAMP:20260415T120000Z
+DTSTART;TZID=Asia/Tokyo:20260415T210000
+DTEND;TZID=Asia/Tokyo:20260415T211500
+RRULE:FREQ=DAILY
+SUMMARY:🌙 匠 デイリーログ(5分)
+DESCRIPTION:Claude Codeを開いて「デイリーログ書きたい」と話しかける。\n\n記入項目:\n・問い合わせ件数(電話/LINE)\n・成約件数・単価\n・広告 表示/クリック/費用/CV\n・未対応案件メモ\n・今日の学び\n・明日の優先タスク3つ\n\n配管洗浄専門店 匠の日々進化システム
+LOCATION:operations/daily-log.md
+BEGIN:VALARM
+TRIGGER:-PT10M
+ACTION:DISPLAY
+DESCRIPTION:あと10分でデイリーログの時間
+END:VALARM
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:匠 デイリーログを書く時間です
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:takumi-weekly-review@takumi-haikan.com
+DTSTAMP:20260415T120000Z
+DTSTART;TZID=Asia/Tokyo:20260420T090000
+DTEND;TZID=Asia/Tokyo:20260420T100000
+RRULE:FREQ=WEEKLY;BYDAY=MO
+SUMMARY:📅 匠 ウィークリーレビュー(30-60分)
+DESCRIPTION:Claude Codeで「週次レビューやろう」と話しかける。\n\nCMOが主導でレビュー:\n・先週の問い合わせ→成約率\n・広告検索語句レポート(除外KW/昇格KW)\n・今週の学びをknowledge/に転記\n・来週の3大アクション決定\n\n操作ファイル: operations/weekly-review.md
+LOCATION:operations/weekly-review.md
+BEGIN:VALARM
+TRIGGER:-PT30M
+ACTION:DISPLAY
+DESCRIPTION:あと30分で週次レビュー
+END:VALARM
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:匠 ウィークリーレビューの時間です(CMO主導)
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:takumi-monthly-review@takumi-haikan.com
+DTSTAMP:20260415T120000Z
+DTSTART;TZID=Asia/Tokyo:20260501T090000
+DTEND;TZID=Asia/Tokyo:20260501T110000
+RRULE:FREQ=MONTHLY;BYMONTHDAY=1
+SUMMARY:📊 匠 月次取締役会(1-2時間)
+DESCRIPTION:Claude Codeで「月次の取締役会を開いて」と話しかける。\n\n5役員全員召集(board-meeting):\n・CFOの月次収支実績・予実対比\n・CMOの集客・広告パフォーマンス\n・CPOのサービス品質・クレーム\n・CSOの競合動向・市場環境\n・CTOの技術投資・自動化\n・取締役会で翌月の最優先KPI決定\n\n操作ファイル: operations/monthly-review.md
+LOCATION:operations/monthly-review.md
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:明日は匠の月次取締役会(1-2時間確保)
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT1H
+ACTION:DISPLAY
+DESCRIPTION:あと1時間で月次取締役会
+END:VALARM
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:匠 月次取締役会の時間です(5役員召集)
+END:VALARM
+END:VEVENT
+END:VCALENDAR

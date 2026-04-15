@@ -20,8 +20,20 @@
 
 ```
 配管洗浄専門店/
-├── CLAUDE.md           # このファイル
-├── index.html          # LP(ランディングページ)本体
+├── CLAUDE.md              # このファイル(憲法・役員一覧)
+├── index.html             # LP(ランディングページ)本体
+├── operations/            # 日次〜月次の運用ログ(毎日書く)
+│   ├── README.md          # 運用ハンドブック(3層リズム・召集ルール)
+│   ├── daily-log.md       # デイリーログ(5-10分)
+│   ├── weekly-review.md   # ウィークリーレビュー(CMO主導)
+│   ├── monthly-review.md  # マンスリーレビュー(取締役会)
+│   └── competitor-watch.md # 競合動向(CSO管轄)
+├── knowledge/             # 継続的に蓄積するナレッジ
+│   ├── customer-voice.md   # お客様の声・クレーム(CPO管轄)
+│   ├── sales-playbook.md   # 受付対応プレイブック(CPO管轄)
+│   ├── ad-copy-archive.md  # 広告コピー勝敗記録(CMO管轄)
+│   └── pricing-decisions.md # 料金意思決定履歴(CFO管轄)
+├── docs/                  # 生成ツール・ドキュメント
 └── .claude/
     └── agents/
         ├── cmo.md            # CMO(集客・マーケ・広告・CVR)
@@ -31,6 +43,15 @@
         ├── cto.md            # CTO(実装・計測・自動化)
         └── board-meeting.md  # 議長(5役員を束ねる取締役会)
 ```
+
+## 運用リズム(operations/README.md 参照)
+
+匠は「機能する会社として毎日動き、日々進化していく」ことを目指している。3層のリズムで回す:
+- **デイリー(5-10分)**: `operations/daily-log.md` に追記
+- **ウィークリー(30-60分/月曜)**: `operations/weekly-review.md` + CMO召集
+- **マンスリー(1-2時間/月初)**: `operations/monthly-review.md` + 取締役会召集
+
+役員は現場ログを先に読んでから助言すること。召集時は関連ログのパスを添えること。
 
 ## 匠の経営チーム(サブエージェント)
 
